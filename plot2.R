@@ -8,7 +8,7 @@ omit.NA.sdata <- na.omit(sdata)
 sdata$DateTime <- paste(sdata$Date, sdata$Time)
 sdata$DateTime <- strptime(sdata$DateTime, format = "%d/%m/%Y %H:%M:%S") 
 #Generate the plot to PNG file
-png(file = "plot2.png", bg = "transparent", width = 480, height = 480)
+png(file = "plot2.png", bg = "white", width = 480, height = 480)
 plot(sdata$DateTime, sdata$Global_active_power, type = "l", main = "", xlab = "",
      ylab = "Global Active Power (kilowats)") 
 #close the graph device
